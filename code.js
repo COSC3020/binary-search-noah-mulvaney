@@ -7,11 +7,11 @@
 
 //Returns index of element in sorted list, -1 if not found
 function binarySearch(list, element) {
-    var start = 0, end = list.length; //[start, end)
+    var start = 0, end = list.length; //controls search window [start, end)
 
     while (true) {
         //window includes only one element
-        if (start + 1 == end) return (list[start] == element) ? start : -1;
+        if (end - start < 2) return (list[start] == element) ? start : -1;
 
         //find center value
         var i = start + Math.floor((end - start) / 2);
@@ -31,4 +31,5 @@ console.log(binarySearch([1, 2, 4, 5, 5, 6, 7, 7, 8, 9, 10], 4)); //2
 console.log(binarySearch([1, 2, 4, 5, 5, 6, 7, 7, 8, 9, 10], 5)); //3 or 4
 console.log(binarySearch([1, 2, 4, 5, 5, 6, 7, 7, 8, 9, 10], 6)); //5
 console.log(binarySearch([1, 2, 4, 5, 5, 6, 7, 7, 8, 9, 10], 9)); //9
+console.log(binarySearch([1, 2, 4, 5, 5, 6, 7, 7, 8, 9, 10], 3)); //-1
 */
