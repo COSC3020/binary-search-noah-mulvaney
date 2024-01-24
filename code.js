@@ -11,7 +11,7 @@ function binarySearch(list, element) {
 
     while (true) {
         //window includes only one element
-        if (start == end) return (list[start] == element) ? start : -1;
+        if (start + 1 == end) return (list[start] == element) ? start : -1;
 
         //find center value
         var i = start + Math.floor((end - start) / 2);
