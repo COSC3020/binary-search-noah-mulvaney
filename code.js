@@ -8,7 +8,7 @@ function binarySearch(list, element) {
     var start = 0, end = list.length; //[start, end)
 
     while (true) {
-        var i = floor((end - start) / 2);
+        var i = Math.floor((end - start) / 2);
 
         if (i == 0) return (list[i] == element) ? i : -1;
 
