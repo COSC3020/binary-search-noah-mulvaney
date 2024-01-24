@@ -10,7 +10,7 @@ function binarySearch(list, element) {
     while (true) {
         var i = Math.floor((end - start) / 2);
 
-        if (i == 0) return (list[i] == element) ? i : -1;
+        if (i == 0) return (list[start] == element) ? start : -1;
 
         if (list[i] > element) {
             end = i;
